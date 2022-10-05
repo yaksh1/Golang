@@ -38,6 +38,7 @@ func main() {
 
 	//calling to greet users
 	greetUsers()
+	greetUsers()
 
 	fmt.Println("--------------------------------------------------------------")
 
