@@ -39,6 +39,7 @@ func main() {
 	//calling to greet users
 	greetUsers()
 
+
 	fmt.Println("--------------------------------------------------------------")
 
 	for remainingTickets > 0 && len(bookings) < n {
