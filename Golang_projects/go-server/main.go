@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -50,15 +51,13 @@ func pathHandler(w http.ResponseWriter, r *http.Request) {
 		// w.WriteHeader(http.StatusNotFound)
 		// fmt.Fprint(w, "404 page not found")
 	}
-
 }
 
 func main() {
 	http.HandleFunc("/", pathHandler)
 	fmt.Println("Starting server at port :8080")
 	//setting the localhost
-	// if err := http.ListenAndServe(":8080", nil); err != nil {
-	// 	log.Fatal(err)
-	// }
-	http.ListenAndServe(":8080", nil)
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatal(err)
+	}
 }
